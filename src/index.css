@@ -1,13 +1,155 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+h1{
+  text-wrap: balance;
+  font-size: clamp(2.25rem, 2.0893rem + 0.7143vw, 2.625rem);
+}
+p{
+  text-wrap: pretty;
+  font-size: clamp(0.75rem, 0.6964rem + 0.2381vw, 0.875rem);
+}
+a{
+  text-decoration: none;
+  font-size: clamp(0.75rem, 0.6964rem + 0.2381vw, 0.875rem);
+
+}
+.hero{
+  padding: 80px 0px;
+  & .container-limit{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    & .hero__description{
+      width: 80%;
+      max-width: 400px;
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+      & .hero__item-login{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        & .hero__principal-text{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        & .hero__form-login{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .hero__input{
+            padding: 0px 0.7rem;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 20px;
+            height: 2.5rem;
+            font-size: clamp(0.75rem, 0.6964rem + 0.2381vw, 0.875rem);
+           
+          }
+          & .btn-forgot{
+            align-self: flex-end;
+            color: black;
+            font-weight: 600;
+          }
+          & .btn-login{
+            background-color: black;
+            color: white;
+            padding: 0.7rem;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        & .hero__continue{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          & hr{
+            width: 30%;
+            color: black;
+          }
+        }
+        & .hero__options{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          & .btn-option{
+            background-color: black;
+            padding: 1rem;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+      }
+      & .hero__item-register{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+        & .btn-register{
+          color: green;
+        }
+      }
+    }
+    & .hero__picture{
+      background-color: #E7E8D8;
+      border-radius: 25px;
+      width: 80%;
+      max-width: 550px;
+      order: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .hero__img{
+        width: 100%;
+        
+      }
+    }
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (width>1200px){
+  .hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .container-limit{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 80px;
+      & .hero__description{
+        order: 1;
+        
+        gap: 70px;
+      }
+      & .hero__picture{
+        order: 2;
+      }
+    }
+  }
 }
