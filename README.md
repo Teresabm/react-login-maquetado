@@ -1,6 +1,6 @@
 ## Práctica de Maquetado con HTML y CSS
 
-**Descripción:** Maquetado de una página web de búsqueda y venta de libros, utilizando las herramientas HTML y CSS. 
+**Descripción:** Práctica de maquetado a partir de un diseño web responsive para iniciar sesión utilizando react
 
 **Nota:** El diseño, íconos e imágenes fueron tomados de la web con fines de práctica y aprendizaje.
 
